@@ -62,8 +62,8 @@ if(req.file){
     let token = generateToken(user._id)
     res.cookie("token", token, {
       httpOnly: true, //note: inspect krke nhi dekh skte js ke acces ko privent krta hai
-      secure: process.env.NODE_ENVIRONMENT == "production",
-      sameSite: "strict",
+      secure: true",
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000 //millisecond in 7d convert  next => then download  cookie-parser package
     }) // set token cookie in br
 
