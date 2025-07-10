@@ -12,7 +12,7 @@ const app = express()
 app.use(express.json()) //note: req.body ke liye middleware
 app.use(cookieParser()) //note: token ko cookie me save kr
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://mern-authentications-1.onrender.com",
   credentials:true  //frontend me cookie ko access krne ke liye 
 })) //note: cors(frontend se connection ke liye ) ke liye middleware
  
